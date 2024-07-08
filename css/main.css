@@ -472,6 +472,8 @@ h6 {
   background-color: var(--accent-color);
   font-size: 14px;
   padding-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
   position: relative;
 }
 
@@ -1057,6 +1059,12 @@ section,
   background-color: var(--background-color);
 }
 
+@media (max-width: 1200px) {
+  .curso {
+    margin-top: 10%;
+  }
+}
+
 .curso .content {
   padding: 0px;
 }
@@ -1347,6 +1355,15 @@ section,
   align-items: center;
   background-size: cover;
   padding: 80px 20px 60px 20px;
+}
+
+@media (max-width: 1200px) {
+  .porque {
+    background-image: url(/img/fondo-pq-2.png);
+  }
+  .porque .btn-read-more {
+    margin-top: 5%;
+  }
 }
 
 .porque .content {
@@ -1824,13 +1841,19 @@ section,
 # Pricing2 Section
 --------------------------------------------------------------*/
 .pricing2 {
-  background-image: url("/img/fondo-cursos.png");
+  background: url("/img/fondo-cursos.png");
   width: 100%;
   position: relative;
   background-size: cover;
   justify-content: center;
   margin-bottom: 50px;
   padding: 80px 20px 60px 20px;
+}
+
+@media (max-width: 1200px) {
+  .pricing2 {
+    background: var(--background-color);
+  }
 }
 
 .rowcards {
@@ -2187,8 +2210,19 @@ section,
 --------------------------------------------------------------*/
 .portfolio {
   padding-bottom: 10%;
+  background: url(/img/fondo-galeria.png);
+  background-size: contain;
+  background-size: 100%;
+  justify-content: center;
 }
 
+@media (max-width: 1200px) {
+  .portfolio {
+    background: var(--background-color);
+    padding-bottom: 20%;
+    padding-top: 5%;
+  }
+}
 
 .portfolio h2 .signo {
   color: var(--default-color);
@@ -2196,13 +2230,10 @@ section,
 
 .portfolio .img-fluid {
   border-radius: 50px 50px 10px 50px;
-}
-
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
+  border: solid;
+  border-width: 5px;
+  border-color: var(--default-color);
+  overflow: hidden;
 }
 
 .portfolio .portfolio-content {
@@ -2212,14 +2243,23 @@ section,
 
 .portfolio .portfolio-content img {
   transition: 0.3s;
+  border-radius: 50px 50px 10px 50px;
+  overflow: hidden;
 }
 
 .portfolio .portfolio-content .portfolio-info {
   opacity: 0;
   position: absolute;
   inset: 0;
+  z-index: 3;
+  transition: all ease-in-out;
+  background: color-mix(in srgb, var(--contrast-color), transparent 100%);
+  padding: 15px;
   border-radius: 50px 50px 10px 50px;
-  object-fit: fill;
+  border: dashed;
+  border-width: 5px;
+  border-color: var(--contrast-color);
+  overflow: hidden;
 }
 
 .portfolio .portfolio-content .portfolio-info h4 {
@@ -2243,7 +2283,7 @@ section,
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* .portfolio .portfolio-content .portfolio-info .preview-link,
+.portfolio .portfolio-content .portfolio-info .preview-link,
 .portfolio .portfolio-content .portfolio-info .details-link {
   position: absolute;
   left: calc(60% - 40px);
@@ -2251,7 +2291,7 @@ section,
   font-weight: 800;
   font-family: var(--default-font);
   top: calc(50% - 14px);
-  color: var(--contrast-color);
+  color: var(--accent-color);
   transition: 0.3s;
   line-height: 1.2;
 }
@@ -2259,17 +2299,26 @@ section,
 .portfolio .portfolio-content .portfolio-info .preview-link:hover,
 .portfolio .portfolio-content .portfolio-info .details-link:hover {
   color: var(--accent-color);
+  overflow: hidden;
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {
   left: 50%;
   font-size: 34px;
   line-height: 0; 
-} */
+  overflow: hidden;
+}
 
-/* .portfolio .portfolio-content:hover .portfolio-info {
+.portfolio .portfolio-content:hover .portfolio-info {
   opacity: 1;
-} */
+  overflow: hidden;
+}
+
+.portfolio .portfolio-content:hover img {
+  transform: scale(1);
+  border-width: 0px;
+  overflow: hidden;
+}
 
 /*--------------------------------------------------------------
 # frase Section
@@ -2418,6 +2467,9 @@ section,
   .testimonials .testimonial-item {
     margin: 40px 20px;
   }
+  .testimonials {
+    padding-top: 20%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -2543,6 +2595,17 @@ section,
 --------------------------------------------------------------*/
 .team {
   padding: 20px;
+  background-image: url(/img/fondo-team.png);
+  background-color: var(--background-color);
+  background-size: contain;
+  background-size: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .team {
+    background: var(--background-color);
+  }
 }
 
 .team h2 .signo {
@@ -2651,6 +2714,16 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+.clients {
+  padding-top: 0px;
+}
+
+@media (max-width: 1200px) {
+  .clients {
+    padding-top: 8%;
+  }
+}
+
 .clients .swiper-slide img {
   transition: 0.3s;
   opacity: 0.5;
@@ -2683,6 +2756,8 @@ section,
   height: 8px;
   border-radius: 50px;
 }
+
+
 
 /*--------------------------------------------------------------
 # Recent Posts Section
@@ -2763,16 +2838,16 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 
-.contact {
-  padding-left: 10%;
-  padding-right: 10%;
+/* .contact {
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 10%;
   background-image: url(/img/fondo-contact.png);
   background-color: var(--background-color);
   background-size: contain;
   background-size: 100%;
   justify-content: center;
-}
+} */
 
 .contact h2 .signo {
   color: var(--default-color);
@@ -2820,6 +2895,8 @@ section,
   border: solid;
   border-radius: 50px 50px 10px 50px;
   border-width: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .contact .php-email-form .error-message {
