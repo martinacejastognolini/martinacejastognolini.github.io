@@ -469,7 +469,11 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--background-color);
+  background: url(/img/fondo-footer.png);
   background-color: var(--accent-color);
+  background-size: contain;
+  background-size: 100%;
+  justify-content: center;
   font-size: 14px;
   padding-bottom: 50px;
   padding-left: 5%;
@@ -677,8 +681,8 @@ h6 {
 --------------------------------------------------------------*/
 
 .credits {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 5px;
+  padding-bottom: 20px;
   background-color: var(--contrast-color);
   font-size: 13px;
 }
@@ -720,9 +724,9 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: var(--default-color);
-  color: var(--contrast-color);
-  border-color: var(--contrast-color);
+  background-color: var(--amarillo);
+  color: var(--default-color);
+  border-color: var(--default-color);
 }
 
 .scroll-top.active {
@@ -859,7 +863,7 @@ section,
 }
 
 .hero h1 .signo {
-  color: var(--background-color)
+  color: var(--background-color);
 }
 
 .hero p {
@@ -902,8 +906,8 @@ section,
 }
 
 .hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--default-color), transparent 0%);
+  color: var(--default-color);
+  background: color-mix(in srgb, var(--amarillo), transparent 0%);
 }
 
 .hero .btn-get-started:hover i {
@@ -1033,8 +1037,8 @@ section,
 }
 
 .about .btn-read-more:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--default-color), transparent 0%);
+  color: var(--default-color);
+  background: color-mix(in srgb, var(--amarillo), transparent 0%);
 }
 
 .about .btn-read-more:hover i {
@@ -1152,8 +1156,8 @@ section,
 }
 
 .curso .btn-read-more:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--default-color), transparent 0%);
+  color: var(--default-color);
+  background: color-mix(in srgb, var(--amarillo), transparent 0%);
 }
 
 .curso .btn-read-more:hover i {
@@ -1334,8 +1338,8 @@ section,
 }
 
 .values2 .btn-read-more:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--default-color), transparent 0%);
+  color: var(--default-color);
+  background: color-mix(in srgb, var(--amarillo), transparent 0%);
 }
 
 .values2 .btn-read-more:hover i {
@@ -1357,12 +1361,15 @@ section,
   padding: 80px 20px 60px 20px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .porque {
     background-image: url(/img/fondo-pq-2.png);
   }
   .porque .btn-read-more {
     margin-top: 5%;
+  }
+  .porque .content p {
+    margin: 1% 10% 3% 10%;
   }
 }
 
@@ -1384,7 +1391,7 @@ section,
 } 
 
 .porque .content p {
-  margin: 1% 10% 3% 10%;
+  margin: 1% 20% 3% 20%;
   line-height: 24px;
 }
 
@@ -1422,8 +1429,8 @@ section,
 }
 
 .porque .btn-read-more:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--default-color), transparent 0%);
+  color: var(--default-color);
+  background: color-mix(in srgb, var(--amarillo), transparent 0%);
 }
 
 .porque .btn-read-more:hover i {
@@ -1732,7 +1739,8 @@ section,
 
 @media (min-width: 800px) {
   .pricing .pricing-tem:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    border-color: var(--contrast-color);
     box-shadow: 0px 0 0px color-mix(in srgb, var(--default-color), transparent 85%); 
   }
   .pricing .pricing-tem {
@@ -1816,9 +1824,9 @@ section,
 }
 
 .pricing .btn-buy:hover {
-  background: var(--default-color);
-  color: var(--contrast-color);
-  border-color: var(--contrast-color);
+  background: var(--amarillo);
+  color: var(--default-color);
+  border-color: var(--default-color);
 }
 
 .pricing .featured {
@@ -1901,8 +1909,8 @@ section,
 
 @media (min-width: 800px) {
   .pricing2 .pricing2-tem:hover {
-    transform: scale(1.1);
     box-shadow: 0px 0 0px color-mix(in srgb, var(--default-color), transparent 85%); 
+    border-color: var(--amarillo);
   }
   .pricing2 .pricing2-tem {
     flex-direction: column;
@@ -1918,7 +1926,7 @@ section,
 
 .pricing2 .price {
   font-size: 40px;
-  color: var(--accent-color);
+  color: var(--default-color);
   font-weight: 600;
   font-family: var(--heading-font);
 }
@@ -1985,9 +1993,9 @@ section,
 }
 
 .pricing2 .btn-buy:hover {
-  background: var(--default-color);
-  color: var(--contrast-color);
-  border-color: var(--contrast-color);
+  background: var(--amarillo);
+  color: var(--default-color);
+  border-color: var(--default-color);
 }
 
 .pricing2 .featured {
@@ -2216,7 +2224,7 @@ section,
   justify-content: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .portfolio {
     background: var(--background-color);
     padding-bottom: 20%;
@@ -2252,7 +2260,6 @@ section,
   position: absolute;
   inset: 0;
   z-index: 3;
-  transition: all ease-in-out;
   background: color-mix(in srgb, var(--contrast-color), transparent 100%);
   padding: 15px;
   border-radius: 50px 50px 10px 50px;
@@ -2315,51 +2322,140 @@ section,
 }
 
 .portfolio .portfolio-content:hover img {
-  transform: scale(1);
   border-width: 0px;
   overflow: hidden;
 }
 
+
 /*--------------------------------------------------------------
-# frase Section
+# Frase Section
 --------------------------------------------------------------*/
+
 .frase {
-  background-color: var(--contrast-color);
-  text-align: left;
-  padding: 20px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: center;
+  background: url(/img/fondo-frase.png);
+  background-size: contain;
+  background-size: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .frase {
+    background: var(--background-color);
+  }
+}
+
+.frase .content h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.frase .img-fluid {
+  width: 125px;
+  height: 125px;
+}
+
+.frase .col-lg-2 {
+  padding: 0px;
+}
+
+.frase .col-lg-6 {
+  padding: 0px;
 }
 
 .frase .content h2 {
-  font-size: 38px;
-  font-family: var(--heading-font);
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--default-color);
 }
 
-.frase .content h2 .color2 {
-  color: var(--accent-color);
+.frase .content h2 .signo {
+  color: var(--default-color);
 } 
 
+.frase .content p {
+  line-height: 130%;
+  font-family: var(--default-font);
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 5%;
+  font-style: italic;
+}
+
+.frase p .thin {
+  font-weight: 200;
+  font-size: 18px;
+}
+
 /*--------------------------------------------------------------
-# frase2 Section
+# Frase2 Section
 --------------------------------------------------------------*/
+
 .frase2 {
-  background-color: var(--accent-color);
-  text-align: left;
-  padding: 20px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: center;
+  background: url(/img/fondo-frase-2.png);
+  background-size: contain;
+  background-size: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .frase2 {
+    background: var(--background-color);
+  }
+}
+
+.frase2 .content h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.frase2 .img-fluid {
+  width: 125px;
+  height: 125px;
+}
+
+.frase2 .col-lg-2 {
+  padding: 0px;
+}
+
+.frase2 .col-lg-6 {
+  padding: 0px;
 }
 
 .frase2 .content h2 {
-  font-size: 38px;
-  font-family: var(--heading-font);
-  color: var(--background-color);
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--default-color);
 }
 
-.frase2 .content h2 .color2 {
-  color: var(--contrast-color);
+.frase2 .content h2 .signo {
+  color: var(--default-color);
 } 
+
+.frase2 .content p {
+  line-height: 130%;
+  font-family: var(--default-font);
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 5%;
+  font-style: italic;
+}
+
+.frase2 p .thin {
+  font-weight: 200;
+  font-size: 18px;
+}
 
 
 /*--------------------------------------------------------------
@@ -2982,11 +3078,12 @@ section,
   font-family: var(--default-font);
   font-size: 14px;
   font-weight: 800;
+  margin-top: 3%;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--default-color), transparent 0%);
-  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--amarillo), transparent 0%);
+  color: var(--default-color);
 }
 
 @keyframes animate-loading {
@@ -3633,8 +3730,8 @@ section,
 }
 
 .comment-form form .btn-primary:hover {
-  color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--amarillo), transparent 20%);
 }
 
 /*--------------------------------------------------------------
