@@ -481,6 +481,12 @@ h6 {
   position: relative;
 }
 
+@media (max-width: 1000px) {
+  .footer {
+    background: var(--accent-color);
+  }
+}
+
 .footer .footer-newsletter {
   background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
   border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
